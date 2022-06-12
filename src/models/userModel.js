@@ -1,22 +1,20 @@
 const mongoose = require('mongoose');
-
 //const userSchema = new mongoose.Schema( {
-    //firstName: String,
-//    lastName: String,
-  //  mobile: {
+   // firstName: String,
+  // lastName: String,
+ // nder: {
+        //type: String,
+      //  enum: ["male", "female", "LGBTQ"] //"falana" will give an error
+    // }, mobile: {
     //    type: String,
-      //  unique: true,
-        //required: true
-   // },
-    //emailId: String,
-    //gender: {
-      //  type: String,
-        //enum: ["male", "female", "LGBTQ"] //"falana" will give an error
-    //},
-    //age: Number,
-
-
-//}, { timestamps: true });
+    //    unique: true,
+    //     required: true
+    // },
+    // emailId: String,
+    // ge
+ // age: Number,
+//}'
+// { timestamps: true });
 const bookSchema = new mongoose.Schema({
     bookName:String,
     authorName:String,

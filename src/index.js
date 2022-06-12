@@ -7,10 +7,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb+srv://kishan_31:4GdZARnCyGUbPKKw@cluster0.d5f50qs.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://kingmb1999:HcGOBJtOhe8idOGZ@cluster0.chezi.mongodb.net/Mohit-DB", {
     useNewUrlParser: true
 })
-.then( () => console.log("HELLO MR.KISHAN MongoDb is connected"))
+.then( () => console.log("HELLO MR.MOHIT csssMongoDb is connected"))
 .catch ( err => console.log(err) )
 
 app.use('/', route);
