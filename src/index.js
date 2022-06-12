@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-mongoose.connect("mongodb+srv://kimmi_kumari:kimmi@cluster0.mfdc6.mongodb.net/kimmi-db3?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://kingmb1999:HcGOBJtOhe8idOGZ@cluster0.chezi.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true
 })
 // mongoose.connect("mongodb://localhost:27017/BooksP3", {
