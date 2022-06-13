@@ -20,8 +20,8 @@ const createOrder = async function (req, res) {
         if (req.headers["isfreeappuser"] === "true") {
             await orderModel.updateOne({ userId: data.userId }, { $set: { amount: 0 } }, { new: true })
         }
-        else {
-            let pPrice = pId.price;
+        else {cd 
+    let pPrice = pId.price;
             if (uId.balance >= pPrice) {
                 await userModel.updateOne({ _id: data.userId }, { $inc: { balance: -pPrice } }, { new: true })
                 await orderModel.updateOne({ _id: saveData._id }, { $set: { amount: pPrice } }, { new: true })
