@@ -8,16 +8,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-mongoose.connect("mongodb+srv://kishan_31:4GdZARnCyGUbPKKw@cluster0.d5f50qs.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://kingmb1999:HcGOBJtOhe8idOGZ@cluster0.chezi.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true
 })
-.then( () => console.log("HELLO MR. KISHAN MongoDb is connected"))
+.then( () => console.log("HELLO MR. MOHIT MongoDb is connected"))
 .catch ( err => console.log(err) )
 
 
 app.use('/', route)
 
 
-app.listen(process.env.PORT || 3000, function () {
-    console.log('Express app running on port ' + (process.env.PORT || 3000))
+app.listen(process.env.PORT || 3100, function () {
+    console.log('Express app running on port ' + (process.env.PORT || 3100))
 });
