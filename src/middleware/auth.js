@@ -1,16 +1,40 @@
 const jwt = require("jsonwebtoken");
 const userModel = require("../models/userModel");
-
-const middle = function (req, res,next) {
+    
+    
+     const authentication = function (req, res,next) {
+    try {
     let token = req.headers["x-Auth-token"];
     if (!token) token = req.headers["x-auth-token"];
     if (!token) return res.send({ status: false, msg: "token must be present" });
-    try {
     let decodedToken = jwt.verify(token, "functionup-radon")
-    req["decodedToken"] = decodedToken
-  }
-  catch (error) { return res.send({ status: false, msg: "token is invalid" }) }
-  next();
-};
 
-  module.exports.middle=middle;
+    console.log(decodedToken)
+     if (!decodedToken) return res.send({ status: false, msg: " token is invalid " });
+
+ req.userId =decodedToken.userId
+  next();
+  }
+  catch(error){
+    res.status(400).send({msg: error.message});
+  };
+}
+
+
+     const auth = function (req, res,next) {
+    try {
+    let token = req.headers["x-Auth-token"];
+    if (!token) token = req.headers["x-auth-token"];
+    if (!token) return res.send({ status: false, msg: "token must be present" });
+    let decodedToken = jwt.verify(token, "functionup-radon")
+    req.decodedToken = decodedToken
+    if (!decodedToken) return res.send({ status: false, msg: " token is invalid " })
+  
+  next();
+  }
+  catch (error) { return res.status(400).send({ status: false, msg: error }) }
+
+}
+ 
+
+  
